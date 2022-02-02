@@ -5,7 +5,7 @@ import 'gridstack/dist/h5/gridstack-dd-native';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
   public grid1: GridStack;
@@ -13,7 +13,7 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     const options = {
-      column: 3,
+      column: 4,
       minRow: 1, // don't collapse when empty
       cellHeight: 50,
       disableOneColumnMode: true,
@@ -38,19 +38,24 @@ export class AppComponent implements AfterViewInit {
 
     const serializedData: GridStackWidget[] = [
       { x: 0, y: 1, w: 1, h: 0, content: 'Number' },
-      { x: 0, y: 1, w: 1, h: 0, content: 'Multimedia' },
-      { x: 0, y: 1, w: 1, h: 0, content: 'Text' },
-      { x: 0, y: 1, w: 1, h: 0, content: 'Date & Time' },
+      { x: 0, y: 1, w: 1, h: 0,  content: 'Multimedia' },
+      { x: 0, y: 1, w: 1, h: 0,  content: 'Text' },
+      { x: 0, y: 1, w: 1, h: 0,  content: 'Date & Time' },
 
-      { x: 1, y: 1, w: 1, h: 0, content: 'Number' },
-      { x: 1, y: 1, w: 1, h: 0, content: 'Multimedia' },
-      { x: 1, y: 1, w: 1, h: 0, content: 'Text' },
-      { x: 1, y: 1, w: 1, h: 0, content: 'Date & Time' },
+      { x: 1, y: 1, w: 1, h: 0,  content: 'Number' },
+      { x: 1, y: 1, w: 1, h: 0,  content: 'Multimedia' },
+      { x: 1, y: 1, w: 1, h: 0,  content: 'Text' },
+      { x: 1, y: 1, w: 1, h: 0,  content: 'Date & Time' },
 
-      { x: 2, y: 1, w: 1, h: 0, content: 'Number' },
-      { x: 2, y: 1, w: 1, h: 0, content: 'Multimedia' },
-      { x: 2, y: 1, w: 1, h: 0, content: 'Text' },
-      { x: 2, y: 1, w: 1, h: 0, content: 'Date & Time' },
+      { x: 2, y: 1, w: 1, h: 0,  content: 'Number' },
+      { x: 2, y: 1, w: 1, h: 0,  content: 'Multimedia' },
+      { x: 2, y: 1, w: 1, h: 0,  content: 'Text' },
+      { x: 2, y: 1, w: 1, h: 0,  content: 'Date & Time' },
+
+      { x: 3, y: 1, w: 1, h: 0,  content: 'Number' },
+      { x: 3, y: 1, w: 1, h: 0,  content: 'Multimedia' },
+      { x: 3, y: 1, w: 1, h: 0,  content: 'Text' },
+      { x: 3, y: 1, w: 1, h: 0,  content: 'Date & Time' },
     ];
 
     this.grid1.load(serializedData);
